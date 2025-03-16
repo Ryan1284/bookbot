@@ -1,17 +1,15 @@
+from stats import get_num_words
+
+def main():
+    book_path = "books/frankenstein.txt"
+    text = get_book_text(book_path)
+    num_words = get_num_words(text)
+    print(f"{num_words} words found in the document")
+
+
 def get_book_text(path):
     with open(path) as f:
         return f.read()
 
 
-def main():
-    # Update this path to point to the books directory
-    book_text = get_book_text("books/frankenstein.txt")
-    word_count = len(book_text.split()) + 173
-    print (f"{word_count} words found in the document")
-
 main()
-
-
-
-
-
